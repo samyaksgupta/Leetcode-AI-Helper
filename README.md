@@ -1,7 +1,5 @@
 # LeetCode AI Helper 🚀
 
-![App Banner](https://via.placeholder.com/1200x400) <!-- Replace with your banner image -->
-
 LeetCode AI Helper is a **Flutter-based mobile and web application** designed to assist developers in solving LeetCode problems efficiently. Powered by **Google's Gemini AI**, it provides step-by-step guidance, hints, and code solutions to help you master problem-solving skills.
 
 ---
