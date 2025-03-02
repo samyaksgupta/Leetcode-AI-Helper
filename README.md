@@ -1,5 +1,7 @@
 # LeetCode AI Helper 🚀
 
+Download The app from the release Section or this [Link](https://github.com/samyaksgupta/Leetcode-AI-Helper/releases/download/v1.0.0/app-debug.apk)
+
 LeetCode AI Helper is a **Flutter-based mobile and web application** designed to assist developers in solving LeetCode problems efficiently. Powered by **Google's Gemini AI**, it provides step-by-step guidance, hints, and code solutions to help you master problem-solving skills.
 
 ---
