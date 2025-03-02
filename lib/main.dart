@@ -5,6 +5,7 @@ import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:flutter_highlight/themes/atom-one-dark.dart';
 import 'package:markdown/markdown.dart' as md show Element;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() async {
   await dotenv.load(fileName: ".env");
@@ -47,7 +48,7 @@ class Message {
   final String content;
   final bool isUser;
 
-  Message({required this.content, required this.isUser});
+  const Message({required this.content, required this.isUser});
 }
 
 class LeetCodeChatPage extends StatefulWidget {
@@ -73,13 +74,13 @@ class _LeetCodeChatPageState extends State<LeetCodeChatPage> {
       apiKey: apiKey,
       systemInstruction: Content.text(
         'You are a LeetCode expert. Your role is to assist users in solving coding problems effectively. '
-  'Follow these guidelines for every response:\n'
-  '1. **Problem Analysis**: Start by analyzing the problem statement and breaking it down into key components.\n'
-  '2. **Approach & Hints**: Provide a step-by-step approach to solve the problem. Offer hints and strategies without directly revealing the code.\n'
-  '3. **Complexity Analysis**: Explain the time and space complexity of the proposed solution.\n'
-  '4. **Code Implementation**: Only provide the code when explicitly requested by the user. Format the code in markdown and write it in C++.\n'
-  '5. **Clarity & Structure**: Keep responses clear, concise, and well-structured. Use bullet points, numbered lists, and markdown formatting for better readability.\n'
-  '6. **Encourage Learning**: Focus on helping the user understand the problem-solving process rather than just providing the solution.'),
+        'Follow these guidelines for every response:\n'
+        '1. **Problem Analysis**: Start by analyzing the problem statement and breaking it down into key components.\n'
+        '2. **Approach & Hints**: Provide a step-by-step approach to solve the problem. Offer hints and strategies without directly revealing the code.\n'
+        '3. **Complexity Analysis**: Explain the time and space complexity of the proposed solution.\n'
+        '4. **Code Implementation**: Only provide the code when explicitly requested by the user. Format the code in markdown and write it in C++.\n'
+        '5. **Clarity & Structure**: Keep responses clear, concise, and well-structured. Use bullet points, numbered lists, and markdown formatting for better readability.\n'
+        '6. **Encourage Learning**: Focus on helping the user understand the problem-solving process rather than just providing the solution.'),
     );
     _chatSession = model.startChat();
   }
@@ -103,8 +104,7 @@ class _LeetCodeChatPageState extends State<LeetCodeChatPage> {
       _scrollToBottom();
     } catch (e) {
       setState(() {
-        _messages
-            .add(Message(content: "Error: ${e.toString()}", isUser: false));
+        _messages.add(Message(content: "Error: ${e.toString()}", isUser: false));
         _isLoading = false;
       });
       _scrollToBottom();
@@ -136,8 +136,13 @@ class _LeetCodeChatPageState extends State<LeetCodeChatPage> {
             child: ListView.builder(
               controller: _scrollController,
               padding: const EdgeInsets.all(16),
-              itemCount: _messages.length,
+              itemCount: _messages.isEmpty ? 1 : _messages.length,
               itemBuilder: (context, index) {
+                if (_messages.isEmpty) {
+                  return const Center(
+                    child: TypewriterText(),
+                  );
+                }
                 final message = _messages[index];
                 return ChatBubble(
                   message: message.content,
@@ -348,6 +353,49 @@ class CustomInlineCodeBuilder extends MarkdownElementBuilder {
         color: isUser ? Colors.white : const Color(0xFFE5E7EB),
         fontFamily: 'monospace',
       ),
+    );
+  }
+}
+
+class TypewriterText extends StatelessWidget {
+  const TypewriterText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedTextKit(
+      animatedTexts: [
+        TypewriterAnimatedText(
+          'Hello! I will help you code!',
+          textStyle: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.white70,
+          ),
+          speed: const Duration(milliseconds: 50),
+        ),
+        TypewriterAnimatedText(
+          'Build Intuition and get better',
+          textStyle: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.white70,
+          ),
+          speed: const Duration(milliseconds: 50),
+        ),
+        TypewriterAnimatedText(
+          'Master Problem Solving',
+          textStyle: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.white70,
+          ),
+          speed: const Duration(milliseconds: 50),
+        ),
+      ],
+      totalRepeatCount: 100,
+      pause: const Duration(milliseconds: 1500),
+      displayFullTextOnTap: true,
+      stopPauseOnTap: true,
     );
   }
 }
