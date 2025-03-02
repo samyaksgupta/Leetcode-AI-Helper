@@ -57,3 +57,16 @@ LeetCode AI Helper is a **Flutter-based mobile and web application** designed to
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/leetcode-ai-helper.git
+2. Navigate to the project directory:
+   ```bash
+   cd leetcode-ai-helper
+3. Add your Gemini API key to the .env file:
+   ```bash
+   GEMINI_API_KEY=your_api_key_here
+4. Install dependencies:
+   ```bash
+   flutter pub get
+5. Run the app:
+   ```bash
+   flutter run
+   
