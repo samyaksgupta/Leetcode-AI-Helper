@@ -61,7 +61,7 @@ LeetCode AI Helper is a **Flutter-based mobile and web application** designed to
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/leetcode-ai-helper.git
+   git clone https://github.com/samyaksgupta/Leetcode-AI-Helper
 2. Navigate to the project directory:
    ```bash
    cd leetcode-ai-helper
