@@ -25,7 +25,10 @@ LeetCode AI Helper is a **Flutter-based mobile and web application** designed to
 | *Home Screen* | *Chat Interface* | *Code Snippet* |
 
 
-![App Demo](https://github.com/user-attachments/assets/9c69c2fa-6f52-4998-8534-f11fa60b16c1)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9c69c2fa-6f52-4998-8534-f11fa60b16c1" alt="App Demo" width="400">
+</p>
+
  <!-- Replace with your GIF -->
 
 ---
