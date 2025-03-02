@@ -1,16 +1,59 @@
-# horizon_v3
+# LeetCode AI Helper 🚀
 
-A new Flutter project.
+![App Banner](https://via.placeholder.com/1200x400) <!-- Replace with your banner image -->
 
-## Getting Started
+LeetCode AI Helper is a **Flutter-based mobile and web application** designed to assist developers in solving LeetCode problems efficiently. Powered by **Google's Gemini AI**, it provides step-by-step guidance, hints, and code solutions to help you master problem-solving skills.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Features ✨
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **AI-Powered Assistance**: Get detailed problem analysis, hints, and optimized solutions.
+- **Interactive Chat Interface**: Communicate with the AI in a clean and intuitive chat UI.
+- **Code Formatting**: Automatically formats code snippets in **C++** with syntax highlighting.
+- **Typewriter Effect**: A visually appealing welcome animation to guide users.
+- **Cross-Platform**: Works seamlessly on **mobile** and **web**.
+- **Markdown Support**: Responses are formatted with markdown for better readability.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Screenshots and Demo 📸
+
+<!-- Add your screenshots and GIFs here -->
+| ![Screenshot 1](https://via.placeholder.com/300x600) | ![Screenshot 2](https://via.placeholder.com/300x600) | ![Screenshot 3](https://via.placeholder.com/300x600) |
+|:---:|:---:|:---:|
+| *Home Screen* | *Chat Interface* | *Code Snippet* |
+
+![App Demo](https://via.placeholder.com/600x400) <!-- Replace with your GIF -->
+
+---
+
+## How It Works 🛠️
+
+1. **Ask a Question**: Type your LeetCode problem or question in the chat input.
+2. **Get Guidance**: The AI provides a step-by-step approach, hints, and complexity analysis.
+3. **Request Code**: Ask for the code solution, and the AI will provide it in **C++** with proper formatting.
+4. **Learn and Improve**: Use the explanations and solutions to build your problem-solving intuition.
+
+---
+
+## Use Cases 💡
+
+- **Learning Data Structures and Algorithms**: Understand complex concepts with clear explanations.
+- **Interview Preparation**: Practice solving problems efficiently with AI-guided hints.
+- **Code Optimization**: Learn how to write optimized and clean code.
+- **Skill Enhancement**: Improve your problem-solving skills by analyzing solutions step-by-step.
+
+---
+
+## Installation 🚀
+
+### Prerequisites
+- Flutter SDK (version 3.0 or higher)
+- Dart SDK (version 2.18 or higher)
+- Google Gemini API Key (add it to `.env` file)
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/leetcode-ai-helper.git
